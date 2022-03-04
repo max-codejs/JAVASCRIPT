@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: black;
+            font: normal 2em Arial
+        } 
+        p {
+            color: rgb(88, 10, 88);
+        }
+        h1 {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+        /*var n1 = window.prompt('Digite um número: ') // String
+        var n2 = window.prompt('Digite outro número: ') // String
+        var s = n1 + n2 //Teremos de converter de string para number, visto que o n1 e o n2 recebe uma string e por consequencia não pode ser somado
+        window.alert('A soma dos dois números é: ' + s + '!') // Concatenação */
+
+        /*var n1 = Number.parseInt(window.prompt('Digite um número: ')) // Não converterá para número real a não ser que eu troque o Number.parseInt por Number.parseFloat
+        var n2 = Number.parseInt(window.prompt('Digite outro número: ')) 
+        var s = n1 + n2 //Teremos de converter de string para number, visto que o n1 e o n2 recebe uma string e por consequencia não pode ser somado
+        window.alert('A soma dos dois números é: ' + s + '!') // Concatenação */
+ 
+        // O NUMBER simplificado abaixo , faz com que o JS decida se o número digitado será Real , Inteiro ... é um comando mais Atualizado das versões mais recentes
+        
+
+        /*var n1 = Number(window.prompt('Digite um número: ')) 
+        var n2 = Number(window.prompt('Digite outro número: ')) 
+        var s = n1 + n2 
+        window.alert('A soma dos dois números é: ' + s + '!') // Concatenação */
+
+        // E se eu quiser fazer uma conversão de número para string posso fazer coloco String(n) ou n.toString() . Veja exemplo abaixo: 
+
+        /*var n1 = Number(window.prompt('Digite um número: ')) 
+        var n2 = Number(window.prompt('Digite outro número: ')) 
+        var s = n1 + n2 
+        window.alert('A soma dos dois números é: ' + String(s) + '!') */
+
+        var n1 = Number(window.prompt('Digite um número: ')) 
+        var n2 = Number(window.prompt('Digite outro número: ')) 
+        var s = n1 + n2 
+        window.alert(`A soma entre ${n1} + ${n2} é igual a ${s}`) // Essa é uma forma de template string mais atualizada do JS interpretar 
+
+
+
+        
+    </script>
+</body>
+</html>

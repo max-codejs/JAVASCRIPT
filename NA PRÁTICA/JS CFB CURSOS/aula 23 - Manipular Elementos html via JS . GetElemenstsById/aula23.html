@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 23 Manipular elementos html via JS</title>
+    
+    
+</head>
+<body>
+    <p id="texto">Max Santos is a excelent programaichon! </p>
+
+    <div id="caixa">Aqui a magia acontece</div>
+    
+    
+    <script>
+        //document.getElementById('texto').style.color ='#f00'; // Esta forma é a alongada
+        var txt = document.getElementById('texto')
+        txt.style.color='#f00';
+        txt.style.fontSize= '50px';
+        txt.style.display= 'block'; 
+
+        var cx = document.getElementById('caixa')
+        cx.style.border='dashed 3px #000'; // ESTILO/ LARGURA/ COR
+        cx.style.width='300px';
+        cx.style.height='300px';
+        cx.style.backgroundColor='blue';
+        cx.style.textAlign='center'
+        cx.style.color='red'
+        cx.style.fontWeight='bolder'
+        
+        
+
+
+    </script>
+    
+</body>
+</html>

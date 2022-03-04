@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 29 - Math Métodos e Constantes matemáticas</title>
+</head>
+<body>
+
+    <script>
+        var valor = 2
+        var mtd = Math.pow(valor, 3) // Consultar sempre a tabela do Math no pdf cfb cursos
+
+        window.document.write(mtd + Math.pow(valor, 2) + '<br>' )
+
+        ////////////////////////////
+        var num = 3.4
+        var mtd2 = Math.floor(num) // Consultar sempre a tabela do Math no pdf cfb cursos
+
+        window.document.write(mtd2 + '<br>')  
+        
+        ////////////////////////////
+        var num2 = 1000
+        var mtd3 = Math.random() // Consultar sempre a tabela do Math no pdf cfb cursos
+
+        window.document.write(mtd3*num2 + '<br>') // Número aleatório entre 0 e 100 
+        //////////////////////
+
+        var num3 = 20.5
+        var mtd4 = Math.round(num3) // Consultar sempre a tabela do Math no pdf cfb cursos
+
+        window.document.write(mtd4 + '<br>')
+        ///////////////////////////
+
+        var num1 = 16 ; 
+        var mtd1 = Math.sqrt(num1) // Consultar sempre a tabela do Math no pdf cfb cursos
+
+        window.document.write(mtd1 * 4 + '<br> <br>') ; 
+        //////////////////////////////
+
+        var valor = 59
+            
+        for(var i=0; i < 6; i++) {
+            document.write(Math.round((Math.random()*valor) + 1) + '<br>') ; 
+        }
+        //////////////////////////////
+
+        
+        var mi = Math.min(6,7,5,4,3,2,9,11,2) ; // Tem q colocar os números no parentese! 
+
+        var mx = Math.max(6,7,5,4,3,2,9,11,2) ; 
+
+        //document.write(mi + mx)
+        document.write(mi + '<br>')
+        document.write(mx + '<br>')
+        document.write(mi * mx)
+
+        
+
+    </script>
+    
+</body>
+</html>

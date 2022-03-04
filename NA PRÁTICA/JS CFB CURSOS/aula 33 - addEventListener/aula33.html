@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 33 - addEventListener</title>
+    <link rel="stylesheet" href="estilodoevento.css">
+        
+
+    <script>
+        function msg() {
+            window.alert('Olá, Max! Pronto para ser um bom <strong>programador</strong> e ganhar bem em 2022? ');
+        }
+
+        function cor1(){
+            var obj = window.document.getElementById('dv1')
+            obj.style.backgroundColor='#fff'; /*LEMBRAR Q O C DO COLOR É MAIÚSCULO*/
+        }
+
+        function cor2(){
+            var obj = window.document.getElementById('dv1')
+            obj.style.backgroundColor='black'; /*LEMBRAR Q O C DO COLOR É MAIÚSCULO*/
+        }
+
+        function aposload() {
+        var obj = window.document.getElementById('dv1');
+        obj.addEventListener('click', msg);
+        obj.addEventListener('mouseover', cor1);
+        obj.addEventListener('mouseout', cor2);
+        }
+
+        window.addEventListener('load', aposload);
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="dv1"></div>
+    
+</body>
+</html>

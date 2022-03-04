@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que vc quer Ser?</title>
+</head>
+<body>
+    <h1>Salário Programador Júnior</h1>
+    Digite aqui seu salário: <input type="number" name="caixasal" id="sal"> Reais.
+    <input type="button" value="Verificar" onclick="processar()">
+    <div id="res">
+        Visualizando salário...
+    </div>
+
+    <script>
+        function processar() {
+            var retangulo = window.document.getElementById('sal')
+            var convertido = Number(retangulo.value)
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = 'Seu salário atual é de <strong>'+ convertido + ' Reais!</strong><br>'
+            if (convertido >= 2000) {
+                res.innerHTML += `Vc já pode se considerar um <strong>Programador!</strong><br>`
+            } else {
+                res.innerHTML += 'Vc não passa de um mero iniciante em <strong>Lógica de Programação.</strong><br>'
+            }
+            res.innerHTML += `Ganhar ${convertido} Reais , ainda é motivo para agradecer!`
+
+
+
+
+
+        }
+
+        
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 31 - Escopo de Variáveis</title>
+</head>
+<body>
+
+    <script>
+
+        var nomeCor='Vermelho'
+
+        function cores() {
+            var nomeCor='Azul' // Aqui ele chama a variável cujo escopo é o que está dentro da function
+            document.write(this.nomeCor + '<br>' + nomeCor + '<br>') 
+            // this. é um comando para chamar a variável global fora da function 
+
+        }
+
+        cores();
+
+        document.write(nomeCor + '<br>') // Aqui ele chama a variável cujo escopo é global que fica fora da function lá em cima 
+
+        ///////////////////////////////////
+
+        var Cor='Vermelho'
+
+        function cor() {
+            Cor='pink' 
+            document.write(Cor + '<br>' + Cor + '<br>') // Já aqui veja que mudou a variável pelo simples fato de não colocar var antes de nomeCor 
+             
+
+        }
+
+        cor();
+
+        document.write(Cor + '<br>') // Aqui a variável saiu pink pq eu a mudei dentro de function sem colocar o 'var ' antes
+
+
+
+
+    </script>
+    
+</body>
+</html>

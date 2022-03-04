@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 22 Tratamento de erros </title>
+</head>
+<body>
+    <script>
+        var num;
+        
+        try{
+            num=10/0;
+            document.write('ERRO: ' + num + '<br>')
+            /*document.writi('ERRO: ' + num + '<br>') se por este o catch abaixo funfa*/
+        }catch(e){
+            document.write('ERRO: ' + e.message + '<br>');
+            console.log('ERRO: ' + e.message);
+        }
+
+        //////////////////
+
+        try{
+            num=window.prompt('Digite um número');
+            if(num>10){
+            
+                throw new Error ('Valor inválido, o valor deve ser menor ou igual a 10 <br>')
+
+            }
+            
+        }catch(e){
+            
+            document.write('ERRO: ' + e.message);
+            console.log('ERRO: ' + e.message);
+            num=10;
+
+        }finally{
+            document.write('Valor: ' + num)
+        }
+    </script>
+    
+</body>
+</html>

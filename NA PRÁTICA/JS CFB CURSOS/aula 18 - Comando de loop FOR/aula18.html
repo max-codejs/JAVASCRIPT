@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 18 - Comando de loop FOR</title>
+</head>
+<body>
+   
+    <script>
+        var cont;
+
+        var num=[];
+
+        /*num.push(0);
+        num.push(1);
+        num.push(2);
+        num.push(3);
+        num.push(4);
+        */
+        
+        for(cont=0;cont<5;cont++) {
+            num.push(window.prompt('Digite algo: ','aqui, pow'));
+        }
+        // No FOR acima, veja que eu já estou definindo oq vai ser de elementos atraves de prompt
+
+        for(cont=0;cont<5;cont++) {
+            document.write('Max será um grande Programador do tipo: ' + num[cont] + '<br>')
+        }
+        
+        // VEJA FOR PARA MATRIZES 
+
+        var mochila=[['Corda',1], ['Cura',10], ['Lanterna',1], ['Pilhas',20]]; 
+
+        for (var l=0; l<4; l++) {
+           for (var c=0; c<2; c++) {
+               document.write(mochila[l][c] + ' ')
+           }
+           document.write('<br>')
+        }
+
+
+
+
+    </script>
+</body>
+</html>

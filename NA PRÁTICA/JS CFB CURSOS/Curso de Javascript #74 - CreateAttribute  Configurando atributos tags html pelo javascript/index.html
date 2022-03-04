@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando atributos</title>
+    <style>
+
+    </style>
+    <script>
+        function inicia(){
+            document.getElementById('btndestaque').addEventListener('click', function(){
+                var num=document.getElementById('fnum').value;
+                var p=document.getElementsByTagName('p');
+                for(var i=0;i<p.length;i++){
+                    p[i].removeAttribute('style');
+                }
+                var at=document.createAttribute('style');
+                at.value='color:#faa;background-color: #000;font-weight: bolder'; // lembrar de ponto e vírgula!
+                p[num].setAttributeNode(at);
+                
+                
+            })
+        }
+
+        window.addEventListener('load', inicia);
+    </script>
+</head>
+<body>
+    <input type="text" id="fnum" ><button id="btndestaque">Destacar</button><br><br>
+
+    <p>Curso de JavaScript</p>
+    <p>Curso de HTML/HTML5</p>
+    <p>Curso de CSS3</p>
+    <p>Max da Silva Santos</p>
+    <p>Madson da Silva Santos</p>
+    <p>Mardelo da Silva Santos</p>
+    <p>Maria Jose da Silva</p>
+    <p>Josival Belarmino dos Santos</p>
+</body>
+</html>

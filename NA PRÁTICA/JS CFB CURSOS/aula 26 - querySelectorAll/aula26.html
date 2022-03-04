@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 26 querySelectorAll</title>
+    <style>
+        .titulo {
+            color: #f00;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+        div {
+            border: solid 3px #000;
+            padding: 10px;
+            display: inline-block;
+
+        }
+        a {
+            display: block;
+        }
+        .quadro {
+            background-color: #ddd;
+        }
+        
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1 class="titulo">querySelectorAll</h1>
+    <p>O querySelectorAll() é um método que retorna os elementos do documento que corresponde a uma classe de CSS ou a uma tag específica.</p>
+    <h2 class="titulo">Curso de Javascript</h2>
+    <p>www.youtube.com/cfbcursos</p>
+    <p class="titulo"><strong>cfbcursos.com.br</strong></p>
+    <p class="titulo">Max é um ótimo programador</p>
+    <div>
+        <h3>Javascript aula 26</h3>
+        <p>Este texto está dentro de uma div.</p>
+        <p>Este também! </p>
+        <h4>Aqui novamente o h4</h4>
+    </div>
+    <div class="quadro">
+        <h3>Javascript aula 26</h3>
+        <p>Este texto está dentro de uma div.</p>
+        <p>Este também! </p>
+        <h4>Aqui o h4</h4>
+    </div>
+    
+    
+    <a href="http://www.youtube.com/cfbcursos" target="blank">CANAL</a>
+    <a href="http://cfbcursos.com.br">SITE</a>
+
+    <hr>
+
+    <script>
+        
+
+        
+        var tagp=document.querySelectorAll('p.titulo');
+        tagp[0].style.color='#0a0'
+        
+
+        for(var i=0; i < tagp.length; i++) {
+            document.write(tagp[i].innerHTML + '<br>');
+        }
+
+        
+
+        var elementos=document.querySelectorAll('div.quadro > *'); /*todos dentro de divquadro*/ 
+
+        for(var i=0; i < elementos.length; i++) {
+            elementos[i].style.color='violet'
+            document.write(elementos[i].innerHTML + '<br>');
+        }
+
+        var tudo=document.querySelectorAll('h1, h2, h3'); 
+
+        for(var i=0; i < tudo.length; i++) {
+            tudo[i].style.color='#0a0'
+        }
+        
+
+        
+
+        var soh4=document.querySelectorAll('h4')
+
+       for (i=0;i<soh4.length;i++){
+           soh4[i].style.fontFamily='arial'
+       } 
+        
+
+
+
+    </script>
+    
+</body>
+</html>

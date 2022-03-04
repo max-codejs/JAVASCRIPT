@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 32 - Eventos</title>
+    <style>
+        #dv1 {
+            width: 200px;
+            height: 200px;
+            border: solid 1px #000;
+        }
+        #dv2 {
+            width: 200px;
+            height: 200px;
+            border: solid 1px #000;
+        }
+    </style>
+
+<script>
+    function mudaCor(obj,cor) {
+        obj.style.backgroundColor=cor
+    }
+
+    function fonte(obj,f) {
+        obj.style.fontFamily=f
+    }
+
+    function Ola() {
+        var data = new Date();
+        var hora = data.getHours();
+        var min = data.getMinutes();
+        var txt = ''
+        var nome = window.prompt('Digite seu nome: ','Nome aqui')
+        if (hora < 12) {
+            txt = 'Bom Dia, ' + nome + '! Agora são ' + hora + ' horas e ' + min + ' minutos!'
+        } else if (hora < 18) {
+            txt = 'Boa Tarde, ' + nome + '! Agora são ' + hora + ' horas  e ' + min + ' minutos!'
+        } else {
+            txt = 'Boa Noite, ' + nome + '! Agora são ' + hora + ' horas  e ' + min + ' minutos!'
+        }
+        window.alert('Olá, ' + txt)
+    }
+
+</script>
+</head>
+<body id="ok" onload="Ola()">
+    <div id="dv1" onclick="alert('iruuuuuuuuuu')"></div>
+    <br>
+    <button onclick="window.alert('Viu o Evento depois que tu clicou? ')" onmouseover="mudaCor(document.getElementById('dv1'),'#00f')">Click aqui Max e verá o evento acontecer</button>
+    <br>
+    <br>
+
+    <div id="dv2" onmouseover="mudaCor(this,'#faa')" onmouseout="mudaCor(this,'#f00')">Passe o mouse e verá a mágica! </div>
+    <br>
+    <button onclick="window.alert('Viu o Evento depois que tu clicou? ')" >Click aqui Max e verá o evento acontecer</button>
+
+    <br>
+    <br>
+
+    <p id="tagp" onclick="fonte(document.getElementById('tagp'),'Verdana')">Max vc ganhará mais de 3 mil como programador</p>
+
+    <!--Obs: ali em cima , no div id dv2, percebe se que o 'THIS' refere - se ao objeto atual div cujo id = dv2 ok ? -->
+    
+</body>
+</html>

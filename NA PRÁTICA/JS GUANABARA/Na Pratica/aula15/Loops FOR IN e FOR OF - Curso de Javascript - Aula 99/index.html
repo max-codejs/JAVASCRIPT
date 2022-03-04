@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR IN e FOR OF</title>
+</head>
+<body>
+    <script>
+    const alunos = {nome: 'Bruno', sobrenome: 'Campos'};
+    const notas = {n1:80, n2:75, n3:92, n4:85};
+    const info = {...alunos, ...notas}; // ... significa q to concatenando os objetos em um só
+
+    /*for(var p in alunos) {
+        console.log(p); // Aqui imprimirá somente as propriedades ou seja, nome: e sobrenome:
+    }*/
+
+    for(var p in info) {
+        console.log(info[p] + '<br>'); // Aqui imprimirá os valores das propriedades dos objetos
+    }
+
+    // OF OF OF OF OF ABAIXO
+
+    let notasdomes = [100,80,75,30,64,47,98,81,60];
+    let aprovados=0;
+    let reprovados=0;
+
+    for(var n of notasdomes){
+        n>=60?aprovados++:reprovados++ // for of em array percorre pelos value
+    }
+
+    console.log('Aprovados: ' + aprovados);
+    console.log('Reprovados: ' + reprovados);
+
+
+    /*for(var n in notasdomes){
+        console.log(n); // for in em array percorre pelos indices
+    }*/
+
+    /*for(var n of notasdomes){
+        console.log(n); // for of em array percorre pelos value
+    }*/
+
+    
+    
+    </script>
+</body>
+</html>

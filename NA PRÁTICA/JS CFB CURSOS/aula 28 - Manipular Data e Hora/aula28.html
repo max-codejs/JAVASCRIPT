@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 28 Manipulando Data e Hora</title>
+
+    <style>
+        strong {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        document.write(Date() + '<br> <br>');
+        var dt=new Date();
+
+        var diaSem=dt.getDay();
+        var dia=dt.getDate();
+        var mes=dt.getMonth();
+        var ano=dt.getFullYear();
+
+        var horas=dt.getHours();
+        var minutos=dt.getMinutes();
+        var segundos=dt.getSeconds();
+
+        var meses=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'] ;
+        var semanas=['Domingo','Segunda-Feira','Terça-Feira','Quarta-Feira','Quinta-Feira','Sexta-Feira','Sábado'] ;
+
+        document.write('<strong>Hoje é</strong>: ' + semanas[diaSem] + ', ' + dia + ' de ' + meses[mes] + ' de ' + ano + '<br>'); 
+        document.write('<strong>Agora São</strong>: ' + horas + ':' + minutos + ':' + segundos + '<br><br>')
+
+        // AQUI DEVO ESTUDAR PARA CASO EU QUEIRA ACRESCENTAR OU DECRESCENTAR ALGUNS DIA/ANO/MES ... ESTUDAR MAIS PF SOBRE ESTE ASSUNTO Q FICOU UM POUCO CONFUSO O USO DE SET
+
+        var dt=new Date();
+
+        var ndt=new Date();
+
+        ndt.setFullYear(dt.getFullYear()-2); // No exemplo aqui tou subtraindo 2 anos
+
+        var diaSem=ndt.getDay();
+        var dia=ndt.getDate();
+        var mes=ndt.getMonth();
+        var ano=ndt.getFullYear();
+
+        var horas=ndt.getHours();
+        var minutos=ndt.getMinutes();
+        var segundos=ndt.getSeconds();
+
+        var meses=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'] ;
+        var semanas=['Domingo','Segunda-Feira','Terça-Feira','Quarta-Feira','Quinta-Feira','Sexta-Feira','Sábado'] ;
+
+        document.write('<strong>Hoje é</strong>: ' + semanas[diaSem] + ', ' + dia + ' de ' + meses[mes] + ' de ' + ano + '<br>'); 
+        document.write('<strong>Agora São</strong>: ' + horas + ':' + minutos + ':' + segundos + '<br>')
+
+        var a = new Date(2021, 08, 30); // aqui eu posso manipular o new Date() de forma manual desde que siga o parâmetro na sequencia obrigatória : new Date(ano, mês, dia, hora, minuto, segundo, milissegundo); // Lembre - se que nesse parâmetro , 0 = janeiro e 11 = Dezembro 
+
+        console.log(a) 
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>

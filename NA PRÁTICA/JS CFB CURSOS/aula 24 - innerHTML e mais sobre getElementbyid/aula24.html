@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 24 innerHTML e mais sobre getElementById</title>
+</head>
+<body>
+
+    <p id="motivação">Max , é o melhor Programador!</p>
+    <input type="text" id="curso" value="CFB Cursos">
+    <div id="fruta">Maça</div>
+    <p id="desenho">Naruto</p>
+    <div id="celular"><strong>Iphone</strong></div>
+    <input type="text" id="peça" value="tração">
+
+
+    <script>
+        
+        window.document.getElementById('motivação').innerHTML='Max, vc vai morar fora do BRASIL !'
+        window.document.getElementById('curso').value='Do Guanabara'
+        window.alert(window.document.getElementById('fruta').innerHTML);
+        var des=window.document.getElementById('desenho').innerHTML='É Dragon Ballll'
+        window.document.write(des)
+        window.document.getElementById('celular').innerHTML='Negócio agora é Xiaomiiii'
+        window.document.getElementById('peça').value='Lonas de freios'
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement</title>
+</head>
+
+<script>
+    var p=document.createElement('p');
+
+    //var t=document.createTextNode('CURSO DE JAVASCRIPT')
+
+    function executar() {
+        
+        //p.appendChild(t); tbm posso usar este junto a variavel acima
+        p.textContent='CFB Cursos';
+
+        document.body.appendChild(p); // Adiciona o elemento filho aqui no caso tag p
+
+    }
+
+    window.addEventListener('load',executar)
+
+    /////////////////////////////
+
+    
+
+</script>
+
+<body>
+    <input type="text" name="ftexto" id="ftexto"> <button id="butao" >Adicionar</button> <br><br>
+    <ul id="itens">
+
+    </ul>
+    <script>
+        document.getElementById('butao').addEventListener("click", aparecer);
+
+        function aparecer() {
+            
+            var ullist=document.getElementById('itens');
+            var lista=document.createElement('li');
+            var texto=document.getElementById('ftexto');
+            ullist.appendChild(lista);
+            lista.textContent=texto.value;
+            texto.value='' // Aqui para no final limpar o input text e recodar o codigo
+            
+        }
+
+        
+
+        
+
+    </script>
+</body>
+</html>

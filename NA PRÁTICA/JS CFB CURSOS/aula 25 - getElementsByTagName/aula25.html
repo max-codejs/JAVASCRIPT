@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 25 getElementsById</title>
+</head>
+<body>
+
+    <p>Vou a Alemanha</p>
+    <p>Vou a Paris</p>
+    <p>Vou a Espanha</p>
+    <p>Vou aos Estados Unidos</p>
+    <p>Vou a Inglaterra</p>
+    <p>Vou a Suíça</p>
+    <h2>Vou manipular esta tag atraves de ******</h2>
+
+    <hr>
+    <script>
+
+        var paises=window.document.getElementsByTagName('p'); 
+        window.document.write(paises[1].innerHTML + '<br>'); 
+        
+        
+        //////////////////// ou do jeito abaixo tbm serve
+
+        var p=window.document.getElementsByTagName('p')[1]; 
+        window.document.write(p.innerHTML);
+
+        p.style.background='black'
+        p.style.fontWeight='bolder'
+
+        //paises[3].style.color='#f00' 
+
+        for(i=0; i<paises.length; i++){
+            paises[i].style.color='#faa'
+
+            
+        }
+
+        var tagaleatoriaindice=window.document.getElementsByTagName('*') // asterisco é metodo para buscar tag aleatoria começando por indice 0 de cima para baixo;
+        tagaleatoriaindice[12].innerHTML='<a href="#">AQUIIIIIIIIIII</a>';
+        tagaleatoriaindice[11].style.backgroundColor='#abb'
+
+        var asterisc=window.document.getElementsByTagName('*')
+        asterisc[14].style.backgroundColor='green'
+
+    </script>
+    
+</body>
+</html>

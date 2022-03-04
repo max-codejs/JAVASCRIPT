@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        div#exemplo {
+            background: blue;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 30px;
+        }
+        
+
+    </style>
+</head>
+<body>
+     
+    <div id="area" onclick="clicar()" onmouseover="entrar()" onmouseout="sair()">
+        interaja... 
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div id="exemplo">
+        em ação ...
+    </div>
+
+    <script>
+        
+        var a = window.document.getElementById('area')
+        
+        function clicar() {
+            //var a = window.document.getElementById('area') Se eu colocasse a variável aqui, só serviria para function : clicar() . Por isso pus lá em cima pra servir a todas.
+            a.innerText = 'Clicou!'
+            a.style.background = 'violet'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou!'
+            a.style.background = 'black'
+        }
+
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'pink'
+        }
+
+        
+        
+        //ABAIXO VEMOS UM OUTRA FORMA DE SELECIONAR OS EVENTOS
+       
+        var e = window.document.getElementById('exemplo')
+        e.addEventListener('click', clicare)
+        e.addEventListener('mouseenter', entrare)
+        e.addEventListener('mouseout', saire)
+
+        function clicare() {
+            e.innerText = 'Clicou!'
+            e.style.background = 'violet'
+        }
+        function entrare() {
+            e.innerText = 'Entrou!'
+            e.style.background = 'black'
+        }
+        function saire() {
+            e.innerText = 'Saiu!'
+            e.style.background = 'pink'
+        }
+
+       
+
+    </script>
+    
+</body>
+</html> 

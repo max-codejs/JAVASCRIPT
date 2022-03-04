@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores.</h1>
+    <input type="number" name="retangulo1" id="retangulo1"> +
+    <input type="number" name="retangulo2" id="retangulo2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    
+    <script>
+        function somar() {
+            var r1 = window.document.getElementById('retangulo1')
+            var r2 = window.document.querySelector('#retangulo2')
+            var n1 = Number(r1.value)
+            var n2 = Number(r2.value)
+            var s = n1 + n2
+            var res = window.document.getElementById('res')
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+        }
+    </script>
+    <hr>
+    <!--AQUI EM BAIXO FUI EU QUEM FIZZZZZZZZZZZZZZZZZZZZZZ IRUUUUUUUUUUUUUUUUU-->
+
+    <input type="number" name="ret1" id="ret1"> +
+    <input type="number" name="ret2" id="ret2">  
+    <input type="button" value="Somar" onclick="somar1()">
+    <div id="res1">Resultado</div>
+
+    <script>
+        function somar1 () {
+        var r1=Number(document.getElementById('ret1').value);
+        var r2=Number(document.getElementById('ret2').value);
+        
+        var total = r1 + r2 ;
+        var res=document.getElementById('res1')
+        res.innerHTML=`O Resultado da soma entre ${r1} + ${r2} = ${total}`
+         
+        
+    }
+        
+    </script>
+
+    
+</body>
+</html>

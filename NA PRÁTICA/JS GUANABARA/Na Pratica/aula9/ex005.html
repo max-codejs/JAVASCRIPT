@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  <link rel="stylesheet" href="Estilos.css"> -->
+    <title>Primeiros passos com DOM</title>
+    <style>
+        /* body {
+            background: white;
+            color: red;
+            font: normal 16px Arial; 
+            
+        }
+        p {
+            color: #000000;
+            font-size: 16px;
+        }
+        #amem {
+            color: #0000ff;
+            background: turquoise;
+            font-size: 16px;
+        }
+        .loading {
+            color: #000000;
+            background: rgb(101, 36, 161);
+        }
+        */
+        #amem, p, .loading, h1 {
+            color: brown;
+            background: white;
+        }
+        /* NO EXEMPLO ACIMA: eu poderei até simplificar ... */
+
+    </style>
+</head>
+<body>
+    <h1>Teste de Seletores</h1>
+    <p>Max vc é vencedor.</p>
+    <p id="amem">Max vc vai enriquecer muito ainda</p>
+    <h2>Testando na pratica</h2>
+    <p> Eu serei muito prospero daqui a 2 anos.</p>
+    <h2 class="loading">Testando na pratica parte 2</h2>
+    <p>vc tem um potencial enorme , Max</p>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Max , vc é vencedor...</p>
+    <p>Max, vc vai vencer rápido demais!</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Viçosa Motos</div>
+    <div class="msgclass">mudando via DOM JavaScript a class</div>
+    <div id="brasil">Vamos trabalhar com o query.</div>
+    <div class="praticandoquery">Max da silva santos</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[7]
+        window.document.write('Está escrito assim: ' + p1.innerText) // Posso colocar também por exemplo : p1.innerHTML para vir com a tag STRONG do no caso a palavra DOM negrito 
+        p1.style.color = 'blue'
+        corpo.style.background = 'darkblue'
+        window.alert(p1.innerHTML) // exemplificando o comentário acima: veja que o comando veio com as tags HTML STRONG inclusas ...
+        
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Viçosa Motos nova empresa'
+        window.document.write('<br>' + d.innerText) // aqui eu repito o que está escrito
+
+        var c = window.document.getElementsByClassName('msgclass')[0]
+        c.innerText = 'Eaí class , blz?'
+        c.style.background = 'red'
+        window.document.write('<br>' + c.innerText)
+
+        var q = window.document.querySelector('#brasil')
+        q.style.color = 'violet'
+        q.style.backgroundColor = "black" 
+        //Talvez esse seletor não esteja pegando no meu VS 
+        
+        
+        
+        
+
+
+
+
+
+        
+
+
+
+    </script>
+    
+    
+</body>
+</html>

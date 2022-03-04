@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 15</title>
+</head>
+<body>
+    <script>
+        var num = [7, 6, 3, 4, 1, 2, 5]
+        
+        num.sort(); // aqui primeiro ele me dar os numeros na ordem crescente
+        num.reverse(); // usando este comando acrescentado do anterior, ele me dará na ordem decrescente
+
+
+        document.write(num)
+        
+        
+        let oficina = []; 
+        oficina.push('cabo');
+        oficina.push('vela');
+        oficina.push('filtro');
+        oficina.push('cachimbo');
+        oficina.push('pisca');
+        oficina.push('manete');
+
+    
+        document.write(oficina.indexOf('filtro') + '<br> <br>');
+        var res = oficina.indexOf('manete');
+
+        if (res < 0 ) {
+            document.write('Item não está na oficina! ')    
+        } else {
+            document.write('O item está na <br> <strong>Posição</strong>: ' + res + '!')
+        }
+
+        
+    </script>
+    
+</body>
+</html>
