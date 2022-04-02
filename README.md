@@ -1,3 +1,3 @@
 # JAVASCRIPT
  CURSO DE JAVASCRIPT 
-melhor linguagem da Inglaterraa
+melhor linguagem da Inglaterraa 2022
