@@ -54,16 +54,19 @@
     <div class="praticandoquery">Max da silva santos</div>
     <script>
         var corpo = window.document.body
-        var p1 = window.document.getElementsByTagName('p')[7]
-        window.document.write('Está escrito assim: ' + p1.innerText) // Posso colocar também por exemplo : p1.innerHTML para vir com a tag STRONG do no caso a palavra DOM negrito 
-        p1.style.color = 'blue'
+        var p1 = window.document.getElementsByTagName('p')[7];
+         
         corpo.style.background = 'darkblue'
         window.alert(p1.innerHTML) // exemplificando o comentário acima: veja que o comando veio com as tags HTML STRONG inclusas ...
+        p1.innerHTML='precisa-se do inner para poder funcionar o style de baixo!'
+        p1.style.color ='yellow'; //????????????????
+        window.document.write('Está escrito assim: ' + p1.innerText) // Posso colocar também por exemplo : p1.innerHTML para vir com a tag STRONG do no caso a palavra DOM negrito
         
         var d = window.document.getElementById('msg')
         d.style.background = 'green'
-        d.innerText = 'Viçosa Motos nova empresa'
+        d.innerText = 'Viçosa Motos modificado por JS'
         window.document.write('<br>' + d.innerText) // aqui eu repito o que está escrito
+        d.style.color='white'
 
         var c = window.document.getElementsByClassName('msgclass')[0]
         c.innerText = 'Eaí class , blz?'
