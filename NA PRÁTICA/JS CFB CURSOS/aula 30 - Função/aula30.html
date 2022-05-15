@@ -16,7 +16,12 @@
         escreve();
         /////////////////////
 
-        function soma (n1,n2) {
+        function melhorProgramador(name, message='Olá') { //olá sera executado acaso dê erro em: Seja vem vindo.
+            window.alert(message + ', ' + name);
+        }
+        melhorProgramador('Max','Seja bem vindo');
+
+        function soma (n1,n2) { // obs: parâmetro é o mesmo que variável só que dentro da função
             var res = n1 + n2
             document.write(res + '<br>')
         }
