@@ -12,7 +12,7 @@
         youtube: 'Programador a Bordo',
         'ultimo-nome': 'Teshima',
         competencias: {
-            linguagens: ['JavaScript', 'Python', 'Go', 'Scala', 'PHP'], 
+            linguagens: ['JavaScript', 'Python', 'Go', 'Scala', 'PHP'], //array dentro de objeto
             instrumentosMusicais: ['Guitarra', 'Baixo', 'Bateria']
         }
     };
@@ -20,23 +20,24 @@
     console.log(usuario);
     console.log(usuario.idade);
     console.log(usuario.nome);
-    console.log(usuario.youtube);
+    console.log(usuario.youtube); // tanto faz esse [mais usual!]
     console.log(usuario['ultimo-nome']);
 
-    console.log(usuario['youtube']);
+    console.log(usuario['youtube']); // ou esse para chamar uma propriedade do objeto 
 
 
-    usuario.ano = 2019;
-
+    usuario.ano = 2019; // inseri aqui outra propriedade para o objeto usuario : ano cujo atributo é 2019.
+    usuario.competencias.linguagens.push('HTML'); // como é um array, inseri HTML via metodo .push
+    
     console.log(usuario);
     console.log(usuario.ano);
 
 
-    delete usuario.idade;
+    delete usuario.idade; // aqui será deletado a propriedade idade
 
     console.log(usuario);
 
-    usuario.hobbies = ['Música', 'Programar', 'Viajar'];
+    usuario.hobbies = ['Música', 'Programar', 'Viajar']; // acrescentei a propriedade hobbies do tipo array
 
 
     console.log(usuario);
