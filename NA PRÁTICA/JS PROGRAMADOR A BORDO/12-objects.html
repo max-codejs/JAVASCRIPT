@@ -21,7 +21,7 @@
     console.log(usuario.idade);
     console.log(usuario.nome);
     console.log(usuario.youtube); // tanto faz esse [mais usual!]
-    console.log(usuario['ultimo-nome']);
+    console.log(usuario['ultimo-nome']); // quando tem o hifen na propriedade é bom chama-la pelo colchetes
 
     console.log(usuario['youtube']); // ou esse para chamar uma propriedade do objeto 
 
@@ -44,22 +44,24 @@
 
 
     var usuario2 = {
-        digaOi(name) {
-            return `Olá ${name}`;
+        digaOi(name) { // esta é a forma mais simplificada de escrever uma função dentro de um objeto
+            return `Olá ${name}, td bem? `;
         }
     };
 
     console.log(usuario2.digaOi('Ayrton'));
-    console.log(usuario2.digaOi('Teshima'));
+    console.log(usuario2.digaOi('Max'));
 
-    var cor = 'rosa';
-    var idade = 26;
-    var nome = 'Ayrton';
+    var cor = 'azul';
+    var idade = 25;
+    var nome = 'Max';
+    var genero = 'M';
 
-    var usuario3 = {
+    var usuario3 = { // quando o nome da propriedade for igual ao nome da variavel ja declarada, não precisa redeclar
         nome,
         idade,
-        cor
+        cor,
+        genero
     };
 
     console.log(usuario3);
@@ -67,12 +69,15 @@
 
     var usuario4 = {
         nome: 'Ayrton',
-        idade: 26
+        idade: 26,
+        ano: 2022
     };
 
     var extraInfo = {
         pais: 'Brasil',
-        estado: 'Rio de Janeiro'
+        estado: 'Rio de Janeiro',
+        cidade: 'Maceió'
+        
     };
 
     // {
@@ -83,17 +88,17 @@
     // }
 
     var novoUsuario = Object.assign({}, usuario4, extraInfo);
-    console.log(novoUsuario);
+    console.log('novoUsuario' + novoUsuario);
 
 
-    // Object.assign(usuario4, extraInfo);
+    // Object.assign(usuario4, extraInfo); // aqui o objeto alvo q receberá as informações é o usuário4
 
     // console.log('usuario4', usuario4);
     // 
 
     var novoUsuario2 = {
-        ...usuario4,
-        ...extraInfo,
+        ...usuario4, // posso adicionar um objeto dentro do outro de forma manual ou seja criando o novo primeiro
+        ...extraInfo, //coloca-se obrigatoriamente tres pontos antes do objeto já existente que quero incluir no novo
         sexo: 'M',
         profissao: 'Programador'
     };
@@ -103,12 +108,12 @@
     console.log(novoUsuario2);
 
 
-    var nomeVariavel = 'estado';
+    var tipodeLocalização = 'estado';
     var nome = 'lastName';
 
     var usuario5 = {
-        [nome]: 'Ayrton',
-        [nomeVariavel]: 'Rio de Janeiro'
+        [nome]: 'Ayrton', // está entre colchetes pq ao ser executado ficará tipo lastName: 'Ayrton'
+        [tipodeLocalização]: 'Rio de Janeiro'
     }
 
     console.log(usuario5);
