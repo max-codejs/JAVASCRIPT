@@ -47,7 +47,7 @@
     console.log('somaTudo', resultado);
 
 
-    function escreverEndereco(rua, cidade, pais, ...complementos) {
+    function escreverEndereco(rua, cidade, pais, ...complementos) { // complementos é um array
         console.log(rua);
         console.log(cidade);
         console.log(pais);
@@ -58,7 +58,7 @@
     escreverEndereco('Rua Programador a Bordo', 'Rio de Janeiro', 'Brasil', 'Estado de Janeiro', 'Casa xpto', 'CEP 123.123.123', 'Bloco 15');
 
 
-    (function (nome) {
+    (function (nome) { // função autoexecutável
         console.log('Executei', nome);
     }('Ayrton'));
 
@@ -76,6 +76,7 @@
 
     console.log(subtraiTresNumeros(15, 3, 6));
 
+    // FUNÇÃO CALLBACK VEJA ABAIXO 
 
     function somaCallback(a, b, fnCallback) {
         return fnCallback(a + b);
@@ -102,7 +103,7 @@
         console.log(idade);
     }
 
-    escreveNome();
+    escreveNome(); // se eu não definir aqui o valor do parâmetro , então posso definir lá em cima como variável , sendo o valor padrão.
 
 
 
