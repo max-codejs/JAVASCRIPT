@@ -14,7 +14,7 @@
       // };
 
       // var { nome, pais, idade } = novoUsuario;
-      // console.log(nome, pais, idade);
+      // console.log(nome, pais, idade); //aqui tou extraindo as var de novoUsuario
 
       // var { nome: primeiroNome } = novoUsuario; //aqui tou extraindo e armazenando noutra var
       // console.log(primeiroNome);
@@ -33,13 +33,17 @@
       // // var primeiro = novoUsuario2.nome.primeiro;
       // // console.log(primeiro);
 
+      // imprimirá Ayrton 2
+
       // var { nome: { primeiro }} = novoUsuario2;
       // console.log(primeiro);
 
+      // imprimirá Ayrton 2
 
       // var { nome: { segundo = 'Teshima' }} = novoUsuario2;
       // console.log(segundo);
 
+      //aqui imprimiria Teshima e se auto criaria uma propriedade de nome segundo: Teshima
 
       // function imprimeUsuario({ nome, idade, sexo, pais = 'Japão' }) {
       //   console.log(nome);
@@ -74,6 +78,8 @@
       for (var prop of props) {
         // console.log('usuarioFunction 2', usuarioFunction[prop])
       }
+
+      // console.log(prop) imprimirá as propriedades do objeto
 
       for (var prop2 in usuarioFunction) {
         if (usuarioFunction.hasOwnProperty(prop2)) {
